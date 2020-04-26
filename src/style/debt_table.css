@@ -3,7 +3,7 @@
   min-width: 400px;
   margin: 20px auto;
   display: grid;
-  grid-template-columns: 6fr 4fr 4fr 3fr 5fr;
+  grid-template-columns: 2fr 6fr 4fr 4fr 3fr 5fr;
 }
 
 .debt-table div {
@@ -24,6 +24,11 @@
 
 .debt-table-header:first-of-type {
   border-left-width: 1px;
+}
+
+.debt-table input[type="checkbox"]{
+  justify-self: center;
+  align-self: center;
 }
 
 .right-align {

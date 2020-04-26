@@ -1,8 +1,12 @@
 import React from 'react'
 
-const DebtRow = ({ debt }) => {
+const DebtRow = ({ debt, checked, handleToggleCheck }) => {
   return (
     <>
+      <input type="checkbox" 
+        checked={checked}
+        onChange={handleToggleCheck} />
+
       <div className="creditor">
         {debt.creditorName}
       </div>

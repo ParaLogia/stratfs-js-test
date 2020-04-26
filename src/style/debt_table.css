@@ -2,11 +2,14 @@
   width: 55%;
   min-width: 400px;
   margin: 20px auto;
-  display: grid;
-  grid-template-columns: 2fr 6fr 4fr 4fr 3fr 5fr;
 }
 
-.debt-table div {
+.debt-table-grid {
+  display: grid;
+  grid-template-columns: 3fr 6fr 4fr 4fr 3fr 5fr;
+}
+
+.debt-table-grid div {
   border: 1px solid rgb(175, 175, 175);
   padding: 4px 2px;
   margin: 1px;
@@ -43,4 +46,25 @@
 
 .balance::before {
   content: "$";
+}
+
+div.debt-table-total {
+  margin: 0;
+  border: 0;
+  background-color: rgb(144, 211, 241);
+  font-weight: bold;
+}
+
+.grid-col-2-7 {
+  grid-column: 2 / 7;
+}
+
+.debt-table-footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.debt-table-footer span {
+  margin-right: 2.5em;
+  font-weight: bold;
 }

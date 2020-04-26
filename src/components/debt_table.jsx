@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import DebtRow from './debt_row'
+import DebtForm from './debt_form'
 import '../style/debt_table.css'
 
 
@@ -18,6 +19,11 @@ const DebtTable = () => {
         setDebts(data)
       })
   }, [])
+
+  const addDebt = (debt) => {
+    setCheckedStates(checkedStates.concat([true]))
+    setDebts(debts.concat([debt]))
+  }
 
   const handleToggleAllChecks = (e) => {
     const newCheckedStates = Array(checkedStates.length)
@@ -38,7 +44,7 @@ const DebtTable = () => {
   debts.forEach((debt, i) => {
     debtRows.push(
       <DebtRow
-        key={debt.id}
+        key={i}
         debt={debt}
         checked={checkedStates[i]}
         handleToggleCheck={handleToggleCheck(i)} />
@@ -74,6 +80,8 @@ const DebtTable = () => {
         </div>
 
         {debtRows}
+
+        <DebtForm addDebt={addDebt} />
 
         <div className="debt-table-total right-align">
           Total

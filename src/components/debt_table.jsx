@@ -25,6 +25,12 @@ const DebtTable = () => {
     setDebts(debts.concat([debt]))
   }
 
+  const handleRemoveDebt = (e) => {
+    e.preventDefault()
+    setCheckedStates(checkedStates.slice(0, checkedStates.length-1))
+    setDebts(debts.slice(0, debts.length-1))
+  }
+
   const handleToggleAllChecks = (e) => {
     const newCheckedStates = Array(checkedStates.length)
     newCheckedStates.fill(e.target.checked)
@@ -80,6 +86,11 @@ const DebtTable = () => {
         </div>
 
         {debtRows}
+
+        <button onClick={handleRemoveDebt}>
+          Remove Debt
+        </button>
+        <span className="grid-col-2-7"></span>
 
         <DebtForm addDebt={addDebt} />
 

@@ -35,6 +35,11 @@ button {
   border-radius: 5px;
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: rgb(69, 122, 219);
+}
+
 .grid-col-2-7 {
   grid-column: 2 / 7;
 }

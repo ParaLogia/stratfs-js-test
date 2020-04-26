@@ -1,0 +1,48 @@
+.debt-table {
+  width: 65%;
+  min-width: 200px;
+  margin: 20px auto;
+}
+
+.debt-table-header {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr 3fr;
+}
+
+.debt-table-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr 3fr;
+  gap: 2px;
+}
+
+.debt-table-header div {
+  border: 1px solid black;
+  border-left-width: 0px;
+  font-weight: bold;
+  padding: 12px 2px;
+  display: flex;
+  align-items: center;
+}
+
+.debt-table-header div:first-of-type {
+  border-left-width: 1px;
+}
+
+.debt-table-content div {
+  border: 1px solid rgb(175, 175, 175);
+  padding: 4px 2px;
+}
+
+.right-align {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.min-pay-percent::after {
+  content: "%";
+}
+
+.balance::before {
+  content: "$";
+}

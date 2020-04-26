@@ -1,36 +1,29 @@
 .debt-table {
-  width: 65%;
-  min-width: 200px;
+  width: 55%;
+  min-width: 400px;
   margin: 20px auto;
-}
-
-.debt-table-header {
   display: grid;
-  grid-template-columns: 3fr 2fr 2fr 1fr 3fr;
+  grid-template-columns: 6fr 4fr 4fr 3fr 5fr;
 }
 
-.debt-table-content {
-  display: grid;
-  grid-template-columns: 3fr 2fr 2fr 1fr 3fr;
-  gap: 2px;
+.debt-table div {
+  border: 1px solid rgb(175, 175, 175);
+  padding: 4px 2px;
+  margin: 1px;
 }
 
-.debt-table-header div {
+.debt-table .debt-table-header {
   border: 1px solid black;
   border-left-width: 0px;
   font-weight: bold;
   padding: 12px 2px;
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
-.debt-table-header div:first-of-type {
+.debt-table-header:first-of-type {
   border-left-width: 1px;
-}
-
-.debt-table-content div {
-  border: 1px solid rgb(175, 175, 175);
-  padding: 4px 2px;
 }
 
 .right-align {

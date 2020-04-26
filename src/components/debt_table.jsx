@@ -18,26 +18,22 @@ const DebtTable = () => {
 
   return (
     <div className="debt-table">
-      <header className="debt-table-header">
-        <div>
-          Creditor
-        </div>
-        <div>
-          First Name
-        </div>
-        <div>
-          Last Name
-        </div>
-        <div className="right-align">
-          Min Pay %
-        </div>
-        <div className="right-align">
-          Balance
-        </div>
-      </header>
-      <div className="debt-table-content">
-        {rows}
+      <div className="debt-table-header">
+        Creditor
       </div>
+      <div className="debt-table-header">
+        First Name
+      </div>
+      <div className="debt-table-header">
+        Last Name
+      </div>
+      <div className="debt-table-header right-align">
+        Min Pay%
+      </div>
+      <div className="debt-table-header right-align">
+        Balance
+      </div>
+      {rows}
     </div>
   )
 }

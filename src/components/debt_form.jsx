@@ -19,7 +19,8 @@ const DebtForm = ({ addDebt }) => {
       firstName,
       lastName,
       minPaymentPercentage: minPaymentPercentage || 0,
-      balance: balance || 0
+      balance: balance || 0,
+      checked: true
     })
     const setters = [setCreditorName, setFirstName, setLastName, setMinPaymentPercentage, setBalance]
     setters.forEach(setter => setter(""))

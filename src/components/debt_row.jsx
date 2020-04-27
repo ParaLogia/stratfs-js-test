@@ -1,12 +1,12 @@
 import React from 'react'
 
-const DebtRow = ({ debt, checked, handleToggleCheck }) => {
-  const checkedClass = checked ? "" : "unchecked"
+const DebtRow = ({ debt, handleToggleCheck }) => {
+  const checkedClass = debt.checked ? "" : "unchecked"
   
   return (
     <>
       <input type="checkbox" 
-        checked={checked}
+        checked={debt.checked}
         onChange={handleToggleCheck} />
 
       <div className={checkedClass}>

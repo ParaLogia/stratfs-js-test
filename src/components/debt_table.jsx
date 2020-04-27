@@ -6,41 +6,40 @@ import '../style/debt_table.css'
 
 const DebtTable = () => {
   const [ debts, setDebts ] = useState([])
-  const [checkedStates, setCheckedStates] = useState([])
 
   useEffect(() => {
     const url = "https://raw.githubusercontent.com/StrategicFS/Recruitment/master/data.json"
     fetch(url)
       .then(res => res.json())
       .then(data => {
-        const newCheckedStates = Array(data.length)
-        newCheckedStates.fill(true)
-        setCheckedStates(newCheckedStates)
+        data.forEach(debt => {
+          debt.checked = true
+        })
         setDebts(data)
       })
   }, [])
 
   const addDebt = (debt) => {
-    setCheckedStates(checkedStates.concat([true]))
     setDebts(debts.concat([debt]))
   }
 
   const handleRemoveDebt = (e) => {
     e.preventDefault()
-    setCheckedStates(checkedStates.slice(0, checkedStates.length-1))
     setDebts(debts.slice(0, debts.length-1))
   }
 
   const handleToggleAllChecks = (e) => {
-    const newCheckedStates = Array(checkedStates.length)
-    newCheckedStates.fill(e.target.checked)
-    setCheckedStates(newCheckedStates) 
+    const newDebts = []
+    debts.forEach(debt => {
+      newDebts.push(Object.assign({}, debt, { checked: e.target.checked }))
+    })
+    setDebts(newDebts) 
   }
 
   const handleToggleCheck = (i) => (e) => {
-    const newCheckedStates = Array.from(checkedStates)
-    newCheckedStates[i] = e.target.checked
-    setCheckedStates(newCheckedStates) 
+    const newDebts = Array.from(debts)
+    newDebts[i] = Object.assign({}, debts[i], { checked: e.target.checked })
+    setDebts(newDebts)
   }
 
   let debtRows = [];
@@ -52,11 +51,10 @@ const DebtTable = () => {
       <DebtRow
         key={i}
         debt={debt}
-        checked={checkedStates[i]}
         handleToggleCheck={handleToggleCheck(i)} />
     )
 
-    if (checkedStates[i]) {
+    if (debt.checked) {
       rowsChecked += 1
       totalBalance += parseFloat(debt.balance)
     }

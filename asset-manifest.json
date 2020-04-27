@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/stratfs-js-test/static/css/main.a1a53093.chunk.css",
+    "main.js": "/stratfs-js-test/static/js/main.06d2cb97.chunk.js",
+    "main.js.map": "/stratfs-js-test/static/js/main.06d2cb97.chunk.js.map",
+    "runtime-main.js": "/stratfs-js-test/static/js/runtime-main.4fe01d01.js",
+    "runtime-main.js.map": "/stratfs-js-test/static/js/runtime-main.4fe01d01.js.map",
+    "static/js/2.9a392e7e.chunk.js": "/stratfs-js-test/static/js/2.9a392e7e.chunk.js",
+    "static/js/2.9a392e7e.chunk.js.map": "/stratfs-js-test/static/js/2.9a392e7e.chunk.js.map",
+    "index.html": "/stratfs-js-test/index.html",
+    "precache-manifest.4120dcf75414d9462ff10167d4f3450f.js": "/stratfs-js-test/precache-manifest.4120dcf75414d9462ff10167d4f3450f.js",
+    "service-worker.js": "/stratfs-js-test/service-worker.js",
+    "static/css/main.a1a53093.chunk.css.map": "/stratfs-js-test/static/css/main.a1a53093.chunk.css.map",
+    "static/js/2.9a392e7e.chunk.js.LICENSE.txt": "/stratfs-js-test/static/js/2.9a392e7e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4fe01d01.js",
+    "static/js/2.9a392e7e.chunk.js",
+    "static/css/main.a1a53093.chunk.css",
+    "static/js/main.06d2cb97.chunk.js"
+  ]
+}

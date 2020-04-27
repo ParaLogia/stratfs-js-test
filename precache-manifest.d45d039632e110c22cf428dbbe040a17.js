@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d2d99e5cfab5b109c5f381d439a9ba95",
+    "revision": "a6519c75febc454872103d218a064309",
     "url": "/stratfs-js-test/index.html"
   },
   {
-    "revision": "6317f44644003f615f49",
+    "revision": "7da19c3a377cf8510ff9",
     "url": "/stratfs-js-test/static/css/main.a1a53093.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stratfs-js-test/static/js/2.9a392e7e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6317f44644003f615f49",
-    "url": "/stratfs-js-test/static/js/main.06d2cb97.chunk.js"
+    "revision": "7da19c3a377cf8510ff9",
+    "url": "/stratfs-js-test/static/js/main.3e0c2a0d.chunk.js"
   },
   {
     "revision": "00e2dbca3e3f6b032d45",
